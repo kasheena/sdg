@@ -188,7 +188,7 @@ def create_wordcloud(text):
     wordcloud= WordCloud(background_color ='white', width= 800, height= 400).generate(text)
     wordcloud.recolor(color_func = black_color_func)
     fig, ax = plt.subplots() 
-    ax.imshow(wordcloud)
+    ax.imshow(wordcloud, interpolation="bilinear")
     ax.axis("off")
     st.pyplot(fig)
 
